@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rental Application Form</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="form-container">
+        <h1>Rental Application Form</h1>
+        <!-- Formspree Integration -->
+        <form id="rentalForm" action="https://formspree.io/f/xyzgdaad" method="POST">
+            <!-- Applicant Information -->
+            <section>
+                <h2>Applicant Information</h2>
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="currentAddress">Current Address</label>
+                <input type="text" id="currentAddress" name="currentAddress" required>
+
+                <label for="previousAddress">Previous Address</label>
+                <input type="text" id="previousAddress" name="previousAddress">
+            </section>
+
+            <!-- Employment Information -->
+            <section>
+                <h2>Employment Information</h2>
+                <label for="employer">Employer Name</label>
+                <input type="text" id="employer" name="employer" required>
+
+                <label for="employerAddress">Employer Address</label>
+                <input type="text" id="employerAddress" name="employerAddress" required>
+
+                <label for="position">Position/Title</label>
+                <input type="text" id="position" name="position" required>
+
+                <label for="income">Monthly Income</label>
+                <input type="number" id="income" name="income" required>
+
+                <label for="duration">Duration of Employment</label>
+                <input type="text" id="duration" name="duration" required>
+
+                <label for="supervisorContact">Supervisor's Contact Information</label>
+                <input type="text" id="supervisorContact" name="supervisorContact" required>
+            </section>
+
+            <!-- Rental History -->
+            <section>
+                <h2>Rental History</h2>
+                <label for="currentLandlord">Current Landlord's Name</label>
+                <input type="text" id="currentLandlord" name="currentLandlord" required>
+
+                <label for="landlordContact">Current Landlord's Contact Information</label>
+                <input type="text" id="landlordContact" name="landlordContact" required>
+
+                <label for="rentAmount">Current Rent Amount</label>
+                <input type="number" id="rentAmount" name="rentAmount" required>
+
+                <label for="reasonForLeaving">Reason for Leaving</label>
+                <textarea id="reasonForLeaving" name="reasonForLeaving" rows="4"></textarea>
+
+                <label for="previousLandlord">Previous Landlord's Information</label>
+                <input type="text" id="previousLandlord" name="previousLandlord">
+            </section>
+
+            <!-- Move-in Information -->
+            <section>
+                <h2>Move-in Information</h2>
+                <label for="moveInDate">Move-in Date</label>
+                <input type="date" id="moveInDate" name="moveInDate" required>
+
+                <label for="duration">Duration</label>
+                <input type="text" id="duration" name="duration" required>
+            </section>
+
+            <!-- Payment Methods -->
+            <section class="payment-methods">
+                <h2>Preferred Payment Method</h2>
+                <input type="radio" id="cashApp" name="paymentMethod" value="Cash App">
+                <label for="cashApp">Cash App</label>
+
+                <input type="radio" id="zelle" name="paymentMethod" value="Zelle">
+                <label for="zelle">Zelle</label>
+
+                <input type="radio" id="paypal" name="paymentMethod" value="PayPal">
+                <label for="paypal">PayPal</label>
+
+                <input type="radio" id="applePay" name="paymentMethod" value="Apple Pay">
+                <label for="applePay">Apple Pay</label>
+
+                <input type="radio" id="venmo" name="paymentMethod" value="Venmo">
+                <label for="venmo">Venmo</label>
+
+                <input type="radio" id="E-transfer" name="paymentMethod" value="E-transfer">
+                <label for="E-transfer">E-transfer</label>
+
+                <input type="radio" id="others" name="paymentMethod" value="Others">
+                <label for="Others">Others</label>
+
+
+
+            </section>
+
+            <!-- References -->
+            <section>
+                <h2>References</h2>
+                <label for="referenceName">Personal Reference Name</label>
+                <input type="text" id="referenceName" name="referenceName" required>
+
+                <label for="referenceRelationship">Relationship</label>
+                <input type="text" id="referenceRelationship" name="referenceRelationship" required>
+
+                <label for="referencePhone">Phone Number</label>
+                <input type="tel" id="referencePhone" name="referencePhone" required>
+
+                <label for="referenceEmail">Email Address</label>
+                <input type="email" id="referenceEmail" name="referenceEmail">
+            </section>
+
+            <!-- Additional Occupants -->
+            <section>
+                <h2>Additional Occupants</h2>
+                <label for="occupants">Names and Ages of Other Occupants</label>
+                <textarea id="occupants" name="occupants" rows="4"></textarea>
+            </section>
+
+            <!-- Pets -->
+            <section>
+                <h2>Pets</h2>
+                <label for="petType">Type/Breed</label>
+                <input type="text" id="petType" name="petType">
+
+                <label for="petWeight">Weight</label>
+                <input type="text" id="petWeight" name="petWeight">
+
+                <label for="petAge">Age</label>
+                <input type="text" id="petAge" name="petAge">
+            </section>
+
+            <!-- Criminal Record -->
+            <section>
+                <h2>Criminal Record</h2>
+                <label for="evictionHistory">Have you been evicted before?</label>
+                <input type="radio" id="evictionYes" name="evictionHistory" value="Yes" required>
+                <label for="evictionYes">Yes</label>
+
+                <input type="radio" id="evictionNo" name="evictionHistory" value="No" required>
+                <label for="evictionNo">No</label>
+
+                <label for="criminalHistory">Do you have any criminal history?</label>
+                <input type="radio" id="criminalYes" name="criminalHistory" value="Yes" required>
+                <label for="criminalYes">Yes</label>
+
+                <input type="radio" id="criminalNo" name="criminalHistory" value="No" required>
+                <label for="criminalNo">No</label>
+            </section>
+
+            <!-- Consent & Declaration -->
+            <section>
+                <h2>Consent & Declaration</h2>
+                <label for="consent">
+                    <input type="checkbox" id="consent" name="consent" required>
+                    I consent to a credit and background check, and declare that the information provided is accurate.
+                </label>
+            </section>
+
+            <!-- Spam Prevention -->
+            <input type="hidden" name="_captcha" value="false">
+            <!-- Redirect after submission -->
+            <input type="hidden" name="_next" value="https://formspree.io/f/xyzgdaad/thanks">
+
+            <!-- Submit Button -->
+            <button type="submit" id="submitBtn">Submit Application</button>
+        </form>
+
+        <!-- Feedback Section -->
+        <div id="feedback"></div>
+    </div>
+
+    <!-- Link to the JavaScript file -->
+    <script src="./app.js"></script>
+
+</body>
+
+</html>
